@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'vectorizer.apps.VectorizerConfig',
+    'extractor.apps.ExtractorConfig',
+    'recommender.apps.RecommenderConfig',
 ]
 
 MIDDLEWARE = [
