@@ -1,13 +1,12 @@
 from django.shortcuts import render
 import numpy as np
-from vectorizer.apps import emb
+from vectorizer.apps import emb, emb_dim
 
 # Create your views here.
 
 
 def article2Vec(text):
 
-    emb_dim = 50
     words = text.strip().replace('.', '').replace(',', '').lower().split(' ')
     vec = np.zeros((emb_dim,))
     counter = 0

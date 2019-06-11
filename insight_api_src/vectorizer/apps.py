@@ -20,7 +20,10 @@ class VectorizerConfig(AppConfig):
         emb_path = '../insight_api_data/glove.6B.50d.txt'
 
         global emb
+        global emb_dim
 
         emb = load_emb(emb_path)
+        emb_dim = 50
+
         print('Embedding loaded.')
 
