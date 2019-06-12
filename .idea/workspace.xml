@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46362c78-e30c-43b1-a4cb-0a0b87611f64" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/insight_api_src/insight_api_src/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/insight_api_src/insight_api_src/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/insight_api_src/recommender/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/insight_api_src/recommender/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/insight_api_src/vectorizer/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/insight_api_src/vectorizer/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/insight_api_src/vectorizer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/insight_api_src/vectorizer/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/insight_api_src/recommender/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/insight_api_src/recommender/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,14 +21,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="14" />
-          <entry key="py" value="1067" />
-          <entry key="txt" value="352" />
+          <entry key="py" value="1069" />
+          <entry key="txt" value="411" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="352" />
-          <entry key="Python" value="1081" />
+          <entry key="PLAIN_TEXT" value="411" />
+          <entry key="Python" value="1083" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -61,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/insight_api_src/recommender/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="336">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -73,47 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/insight_api_src/insight_api_src/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
+            <state relative-caret-position="848">
               <caret line="55" selection-start-line="55" selection-end-line="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/insight_api_src/vectorizer/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/insight_api_src/vectorizer/apps.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="e#0#33#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/insight_api_src/insight_api_src/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="e#639#671#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -128,11 +88,11 @@
       <list>
         <option value="$PROJECT_DIR$/insight_api_src/extractor/views.py" />
         <option value="$PROJECT_DIR$/insight_api_src/insight_api_src/urls.py" />
-        <option value="$PROJECT_DIR$/insight_api_src/recommender/views.py" />
         <option value="$PROJECT_DIR$/insight_api_src/recommender/apps.py" />
         <option value="$PROJECT_DIR$/insight_api_src/vectorizer/views.py" />
         <option value="$PROJECT_DIR$/insight_api_src/vectorizer/apps.py" />
         <option value="$PROJECT_DIR$/insight_api_src/insight_api_src/settings.py" />
+        <option value="$PROJECT_DIR$/insight_api_src/recommender/views.py" />
       </list>
     </option>
   </component>
@@ -269,11 +229,19 @@
       <option name="project" value="LOCAL" />
       <updated>1560224620737</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added cors header for the chrome extension.">
+      <created>1560361114542</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1560361114542</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2494043" />
@@ -303,7 +271,8 @@
     <MESSAGE value="Added extractor and vectorizer functions." />
     <MESSAGE value="Setup the api to take a wiki topic and return an averaged embedding vector" />
     <MESSAGE value="API now takes a wiki topic and return an event. Using a minimal embedding." />
-    <option name="LAST_COMMIT_MESSAGE" value="API now takes a wiki topic and return an event. Using a minimal embedding." />
+    <MESSAGE value="Added cors header for the chrome extension." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added cors header for the chrome extension." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Django/lib/python3.6/site-packages/django/apps/config.py">
@@ -326,36 +295,6 @@
     <entry file="file://$PROJECT_DIR$/insight_api_src/extractor/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/insight_api_src/vectorizer/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/insight_api_src/recommender/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/insight_api_src/extractor/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/insight_api_src/vectorizer/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -376,10 +315,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/insight_api_src/vectorizer/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/insight_api_src/insight_api_src/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
+        <state relative-caret-position="848">
           <caret line="55" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/insight_api_src/extractor/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/insight_api_src/recommender/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -25,6 +25,6 @@ def recommender(request):
 
     event_ix = np.argmax(event_matrix.T.dot(wiki_vector))
 
-    response = json.dumps(events_list[event_ix])
+    response = json.dumps([events_list[event_ix]])
 
     return HttpResponse(response)
