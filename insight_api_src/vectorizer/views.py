@@ -16,6 +16,7 @@ def article2Vec(text):
             counter += 1
         except KeyError:
             continue
+    # averaging and summing would have different biases
     vec /= counter
 
     return vec
