@@ -1,7 +1,5 @@
 from django.shortcuts import render
 
-from extractor.views import wikiExtractor
-
 import re
 import nltk
 import spacy
