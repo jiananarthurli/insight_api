@@ -27,7 +27,7 @@ def recommender(request):
 
     response_dict = {
         'found' : True,
-        'events' : [events_list[event_ix]]
+        'events' : events_list[event_ix:event_ix+2] # top 3
     }
 
     response = json.dumps(response_dict)
