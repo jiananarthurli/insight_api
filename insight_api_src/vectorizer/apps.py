@@ -1,35 +1,44 @@
 from django.apps import AppConfig
 import json
-import io
+import numpy as np
 
 class VectorizerConfig(AppConfig):
     name = 'vectorizer'
 
     def ready(self):
 
-        # def load_emb(fname):
-        #     fin = io.open(fname, 'r', encoding='utf-8', newline='\n', errors='ignore')
-        #     # n, d = map(int, fin.readline().split())
-        #     data = {}
-        #     for line in fin:
-        #         tokens = line.rstrip().split(' ')
-        #         data[tokens[0]] = list(map(float, tokens[1:]))
-        #
-        #     return data
-        #
-        # emb_path = '../insight_api_data/glove.6B.50d.txt'
-        # # emb_path = '../insight_api_data/wiki-news-300d-1M.vec.txt'
-        #
-        # global emb
-        # global emb_dim
-        #
-        # emb = load_emb(emb_path)
-        # emb_dim = 50
-        # # emb_dim = 300
-        #
-        # print('Embedding loaded.')
-
         global event_list
+        global event_matrix
+        global idf_dict
+        global key_tokens
+        global event_matrix2list_dict
+        global list2event_matrix_dict
 
-        with open('event_list.txt', 'r') as f:
+        data_dir = '../insight_api_data/'
+        event_list_path = data_dir + 'event_list.txt'
+        event_matrix_path = data_dir + 'event_matrix.csv'
+        idf_dict_path = data_dir + 'idf_dict.json'
+        key_tokens_path = data_dir + 'key_tokens.json'
+        event_matrix2list_dict_path = data_dir + 'event_matrix2list_dict.json'
+        list2event_matrix_dict_path = data_dir + 'list2event_matrix_dict.json'
+
+        with open(event_list_path, 'r') as f:
             event_list = json.load(f)
+        with open(event_matrix_path, 'r') as f:
+            event_matrix = np.genfromtxt(f, delimiter=',')
+        with open(idf_dict_path, 'r') as f:
+            idf_dict = json.load(f)
+        with open(key_tokens_path, 'r') as f:
+            key_tokens = json.load(f)
+        with open(event_matrix2list_dict_path, 'r') as f:
+            event_matrix2list_dict = json.load(f)
+        with open(list2event_matrix_dict_path, 'r') as f:
+            list2event_matrix_dict = json.load(f)
+
+        print('Data loaded.')
+
+
+
+
+
+

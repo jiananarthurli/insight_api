@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from vectorizer.apps import emb, emb_dim
-from recommender.apps import events_list
-from vectorizer.views import article2Vec
+
+from vectorizer.apps import event_list, event_matrix, idf_dict, key_tokens, event_matrix2list_dict, list2event_matrix_dict
 from extractor.views import wikiExtractor
+from vectorizer.views import tf_idf
 
 from django.http import HttpResponse
 import json
@@ -11,23 +11,36 @@ import numpy as np
 # Create your views here.
 
 
+def predict(event_matrix, vec_norm, threshold):
+    prod = vec_norm.dot(event_matrix.T)
+    # returned values are the indices of the SELECTED events, or the event matrix indices
+    event_pred = list(np.nonzero(prod[0, :] > threshold)[0])
+    return event_pred
+
+
 def recommender(request):
 
+    threshold = 0.235
+
     wiki_topic = request.GET['wiki_topic']
-
     wiki_text = wikiExtractor(wiki_topic)
-    wiki_vector = article2Vec(wiki_text)
 
-    event_matrix = np.zeros((emb_dim, len(events_list)))
+    wiki_vec = tf_idf(wiki_text, key_tokens, idf_dict)
 
-    for i, event in enumerate(events_list):
-        event_matrix[:, i] = article2Vec(event['description'])
+    recommendations = predict(event_matrix, wiki_vec.reshape(1, -1), threshold)
 
-    event_ix = np.argmax(event_matrix.T.dot(wiki_vector))
+    found = False
+    recommendation_list = []
+
+    if len(recommendations) != 0:
+        found = True
+        for ix in recommendations:
+            event_ix = int(event_matrix2list_dict[ix])
+            recommendation_list.append(events_list[event_ix])
 
     response_dict = {
-        'found' : True,
-        'events' : events_list[event_ix:event_ix+2] # top 3
+        'found' : found,
+        'events' : recommendation_list # top 3
     }
 
     response = json.dumps(response_dict)
