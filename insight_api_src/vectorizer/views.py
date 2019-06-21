@@ -6,7 +6,6 @@ import re
 import nltk
 import spacy
 import numpy as np
-from sklearn.preprocessing import normalize
 
 from nltk.stem import WordNetLemmatizer
 from collections import defaultdict
