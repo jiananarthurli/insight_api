@@ -119,7 +119,9 @@ def tf_idf(text, key_tokens, idf_dict, ngram=3):
     for i, key in enumerate(key_tokens):
         tf_idf_vec[i] = tf_idf_dict[key]
 
-    # returns a 1d np array
+    # returns a normalized 1d np array
+    tf_idf_vec = tf_idf_vec / np.linalg.norm(tf_idf_vec)
+
     return tf_idf_vec
 
 

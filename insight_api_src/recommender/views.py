@@ -8,13 +8,17 @@ from django.http import HttpResponse
 import json
 import numpy as np
 
+from time import time
+
 # Create your views here.
 
 
 def predict(event_matrix, vec_norm, threshold):
+
     prod = vec_norm.dot(event_matrix.T)
     # returned values are the indices of the SELECTED events, or the event matrix indices
     event_pred = list(np.nonzero(prod[0, :] > threshold)[0])
+
     return event_pred
 
 
@@ -24,6 +28,8 @@ def recommender(request):
 
     wiki_topic = request.GET['wiki_topic']
     wiki_text = wikiExtractor(wiki_topic)
+
+    tic = time()
 
     wiki_vec = tf_idf(wiki_text, key_tokens, idf_dict)
 
@@ -35,8 +41,8 @@ def recommender(request):
     if len(recommendations) != 0:
         found = True
         for ix in recommendations:
-            event_ix = int(event_matrix2list_dict[ix])
-            recommendation_list.append(events_list[event_ix])
+            event_ix = int(event_matrix2list_dict[str(ix)])
+            recommendation_list.append(event_list[event_ix])
 
     response_dict = {
         'found' : found,
@@ -44,5 +50,7 @@ def recommender(request):
     }
 
     response = json.dumps(response_dict)
+
+    print("Time lapse {}".format(time() - tic))
 
     return HttpResponse(response)
