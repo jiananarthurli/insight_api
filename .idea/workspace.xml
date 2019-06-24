@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="46362c78-e30c-43b1-a4cb-0a0b87611f64" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/insight_api_src/recommender/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/insight_api_src/recommender/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/insight_api_src/insight_api_src/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/insight_api_src/insight_api_src/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,21 +24,21 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="207" />
-          <entry key="py" value="2347" />
-          <entry key="txt" value="598" />
+          <entry key="Python Console" value="241" />
+          <entry key="py" value="2356" />
+          <entry key="txt" value="626" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="598" />
-          <entry key="Python" value="2554" />
+          <entry key="PLAIN_TEXT" value="626" />
+          <entry key="Python" value="2597" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="json" value="2" />
-          <entry key="py" value="29" />
+          <entry key="py" value="30" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -46,7 +46,7 @@
         <counts>
           <entry key="JSON" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="29" />
+          <entry key="Python" value="30" />
         </counts>
       </usages-collector>
     </session>
@@ -80,17 +80,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/insight_api_src/insight_api_src/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-end-line="19" />
+            <state relative-caret-position="123">
+              <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-end-line="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/insight_api_src/insight_api_src/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/insight_api_src/recommender/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="35" selection-start-line="1" selection-end-line="2" />
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,6 +114,7 @@
       <find>idf_dict</find>
       <find>spacy</find>
       <find>vec</find>
+      <find>debug</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -110,15 +123,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/insight_api_src/insight_api_src/settings.py" />
         <option value="$PROJECT_DIR$/insight_api_src/manage.py" />
         <option value="$PROJECT_DIR$/insight_api_src/extractor/views.py" />
         <option value="$PROJECT_DIR$/insight_api_src/vectorizer/apps.py" />
         <option value="$PROJECT_DIR$/insight_api_src/recommender/apps.py" />
         <option value="$PROJECT_DIR$/insight_api_src/recommender/views.py" />
         <option value="$PROJECT_DIR$/insight_api_src/vectorizer/views.py" />
-        <option value="$PROJECT_DIR$/insight_api_src/insight_api_src/urls.py" />
         <option value="$PROJECT_DIR$/insight_api_src/recommender/urls.py" />
+        <option value="$PROJECT_DIR$/insight_api_src/insight_api_src/urls.py" />
+        <option value="$PROJECT_DIR$/insight_api_src/insight_api_src/settings.py" />
       </list>
     </option>
   </component>
@@ -145,6 +158,17 @@
               <item name="insight_api" type="b2602c69:ProjectViewProjectNode" />
               <item name="insight_api" type="462c0819:PsiDirectoryNode" />
               <item name="Django" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insight_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insight_api" type="462c0819:PsiDirectoryNode" />
+              <item name="insight_api_src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="insight_api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insight_api" type="462c0819:PsiDirectoryNode" />
+              <item name="insight_api_src" type="462c0819:PsiDirectoryNode" />
+              <item name="insight_api_src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="insight_api" type="b2602c69:ProjectViewProjectNode" />
@@ -325,7 +349,21 @@
       <option name="project" value="LOCAL" />
       <updated>1561396231346</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Updated url matching rules.">
+      <created>1561396707928</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1561396707928</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Turned off debugging">
+      <created>1561397063913</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1561397063914</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -344,9 +382,9 @@
       <window_info id="Favorites" order="0" sideWeight="0.503268" side_tool="true" weight="0.2494043" />
       <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49673203" visible="true" weight="0.2494043" />
       <window_info id="Structure" order="2" sideWeight="0.503268" side_tool="true" weight="0.2494043" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.49960285" visible="true" weight="0.329927" />
+      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49960285" weight="0.329927" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50039715" side_tool="true" weight="0.329927" />
-      <window_info anchor="bottom" id="Python Console" order="2" weight="0.329927" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="2" visible="true" weight="0.329927" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" show_stripe_button="false" />
@@ -376,7 +414,8 @@
     <MESSAGE value="tf-idf recommendation" />
     <MESSAGE value="Updated event venues." />
     <MESSAGE value="Updated url matching rules." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated url matching rules." />
+    <MESSAGE value="Turned off debugging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Turned off debugging" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/insight_api_data/event_list.txt">
@@ -389,13 +428,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/insight_api_src/extractor/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/insight_api_src/insight_api_src/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/insight_api_src/manage.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -441,13 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/insight_api_src/vectorizer/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/insight_api_src/extractor/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -458,17 +483,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/insight_api_src/vectorizer/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/insight_api_src/insight_api_src/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-end-line="19" />
+        <state relative-caret-position="123">
+          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-end-line="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/insight_api_src/recommender/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="35" selection-start-line="1" selection-end-line="2" />
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/insight_api_src/insight_api_src/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
         </state>
       </provider>
     </entry>
