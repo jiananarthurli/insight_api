@@ -27,5 +27,5 @@ urlpatterns = [
 # ]
 
 urlpatterns += [
-    url(r'^submission/', include('recommender.urls')),
+    url(r'submission/', include('recommender.urls')),
 ]
