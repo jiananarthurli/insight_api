@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46362c78-e30c-43b1-a4cb-0a0b87611f64" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/insight_api_src/recommender/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/insight_api_src/insight_api_src/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/insight_api_src/insight_api_src/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/insight_api_src/recommender/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/insight_api_src/recommender/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,15 +24,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="180" />
+          <entry key="Python Console" value="207" />
           <entry key="py" value="2347" />
-          <entry key="txt" value="575" />
+          <entry key="txt" value="598" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="575" />
-          <entry key="Python" value="2527" />
+          <entry key="PLAIN_TEXT" value="598" />
+          <entry key="Python" value="2554" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -78,26 +77,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/insight_api_src/insight_api_src/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-              <folding>
-                <element signature="e#639#671#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="221">
+              <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-end-line="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/insight_api_src/recommender/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="1" column="35" selection-start-line="1" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -124,8 +117,8 @@
         <option value="$PROJECT_DIR$/insight_api_src/recommender/apps.py" />
         <option value="$PROJECT_DIR$/insight_api_src/recommender/views.py" />
         <option value="$PROJECT_DIR$/insight_api_src/vectorizer/views.py" />
-        <option value="$PROJECT_DIR$/insight_api_src/recommender/urls.py" />
         <option value="$PROJECT_DIR$/insight_api_src/insight_api_src/urls.py" />
+        <option value="$PROJECT_DIR$/insight_api_src/recommender/urls.py" />
       </list>
     </option>
   </component>
@@ -151,22 +144,11 @@
             <path>
               <item name="insight_api" type="b2602c69:ProjectViewProjectNode" />
               <item name="insight_api" type="462c0819:PsiDirectoryNode" />
-              <item name="insight_api_src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="insight_api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="insight_api" type="462c0819:PsiDirectoryNode" />
-              <item name="insight_api_src" type="462c0819:PsiDirectoryNode" />
-              <item name="recommender" type="462c0819:PsiDirectoryNode" />
+              <item name="Django" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="insight_api" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="insight_api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6 (Django) &gt;" type="70bed36:NamedLibraryElementNode" />
             </path>
           </expand>
           <select />
@@ -329,7 +311,21 @@
       <option name="project" value="LOCAL" />
       <updated>1561342339757</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Updated url matching rules.">
+      <created>1561392555400</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1561392555400</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Updated url matching rules.">
+      <created>1561396231346</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1561396231346</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -379,7 +375,8 @@
     <MESSAGE value="Add event data and idf data" />
     <MESSAGE value="tf-idf recommendation" />
     <MESSAGE value="Updated event venues." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated event venues." />
+    <MESSAGE value="Updated url matching rules." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated url matching rules." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/insight_api_data/event_list.txt">
@@ -461,23 +458,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/insight_api_src/recommender/urls.py">
+    <entry file="file://$PROJECT_DIR$/insight_api_src/insight_api_src/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-end-line="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/insight_api_src/insight_api_src/urls.py">
+    <entry file="file://$PROJECT_DIR$/insight_api_src/recommender/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#639#671#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" column="35" selection-start-line="1" selection-end-line="2" />
         </state>
       </provider>
     </entry>

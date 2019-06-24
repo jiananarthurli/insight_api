@@ -3,7 +3,7 @@ from recommender.views import recommender
 
 
 urlpatterns = [
-    url(r'^$', recommender, name='submission'),
+    url('', recommender, name='submission'),
 ]
 
 
