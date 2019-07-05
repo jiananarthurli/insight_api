@@ -13,7 +13,7 @@ lemmatizer = WordNetLemmatizer()
 nlp = spacy.load("en_core_web_sm")
 stop = set(stopwords.words('english'))
 stop_words = set(['event', 'collection', 'street', 'many',
-                  'exhibitions', 'works', 'monday', 'tuesday',
+                  'exhibition', 'work', 'monday', 'tuesday',
                   'wednesday', 'thursday', 'friday', 'saturday',
                   'sunday', 'new', 'york', 'new york', 'new york city',
                   'visit', 'museum', 'world', 'department', 'NYC'
@@ -21,6 +21,8 @@ stop_words = set(['event', 'collection', 'street', 'many',
 stop.update(stop_words)
 
 def preprocess(text):
+
+    # text cleaning
     text = text.replace('\n', ' ')
     text = text.replace('&#x27;', "'")
     text = text.replace('&#x2019;', "'")
@@ -35,20 +37,21 @@ def preprocess(text):
 
     return text
 
-
+# PoS tagging for text
 def doc2tag(text):
 
     sentences = nltk.sent_tokenize(text)
-    noun_list = []
+    tag_list = []
     for s in sentences:
         tokens = nltk.word_tokenize(s)
         text_tagged = nltk.pos_tag(tokens)
         pair = [(word, pos) for (word, pos) in text_tagged]
-        noun_list.extend(pair)
+        tag_list.extend(pair)
 
-    return noun_list
+    return tag_list
 
 
+# find PoS pattern of NNP, NNP, NN
 def nnp_nn(text):
 
     patterns = "NNP_NN: {<NNP>+(<NNS>|<NN>+)}"  # at least one NNP followed by NNS or at least one NN
@@ -66,6 +69,7 @@ def nnp_nn(text):
     return phrase
 
 
+# find PoS pattern of JJ, NN
 def jj_nn(text):
 
     patterns = "NNP_NN: {<JJ>+(<NN>+)}"  #
@@ -83,14 +87,17 @@ def jj_nn(text):
     return phrase
 
 
+# calculate TF-IDF vector for the text, assume trigrams
 def tf_idf(text, key_tokens, idf_dict, ngram=3):
+
     tf_idf_dict = defaultdict(int)
 
-    # tokens been used for tf-idf
     text = text.lower()
 
+    # tokens been used for tf-idf
     tokens = nltk.word_tokenize(text)
 
+    # get unigram, bigram, trigram
     token_list = []
     for i in range(1, ngram + 1):
         token_list.extend(nltk.ngrams(tokens, i))
@@ -100,15 +107,16 @@ def tf_idf(text, key_tokens, idf_dict, ngram=3):
     for i, token in enumerate(token_list):
         token_list[i] = lemmatizer.lemmatize(token)
 
-    # initialize to full dimension
+    # initialize the tf_idf_dict with all the tokens to be used
     for token in key_tokens:
         tf_idf_dict[token] = 0
 
-    # count
+    # count frequency of each token
     for token in token_list:
         if token in key_tokens:
             tf_idf_dict[token] += 1
 
+    # tf-idf vector calculation
     for key in tf_idf_dict.keys():
         tf_idf_dict[key] = tf_idf_dict[key] * idf_dict[key]
 

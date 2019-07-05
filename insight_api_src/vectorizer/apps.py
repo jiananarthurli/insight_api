@@ -7,7 +7,6 @@ class VectorizerConfig(AppConfig):
 
     def ready(self):
 
-        global event_list
         global event_matrix
         global idf_dict
         global key_tokens
@@ -15,15 +14,12 @@ class VectorizerConfig(AppConfig):
         global list2event_matrix_dict
 
         data_dir = '../insight_api_data/'
-        event_list_path = data_dir + 'event_list.txt'
         event_matrix_path = data_dir + 'event_matrix.csv'
         idf_dict_path = data_dir + 'idf_dict.json'
         key_tokens_path = data_dir + 'key_tokens.json'
         event_matrix2list_dict_path = data_dir + 'event_matrix2list_dict.json'
         list2event_matrix_dict_path = data_dir + 'list2event_matrix_dict.json'
 
-        with open(event_list_path, 'r') as f:
-            event_list = json.load(f)
         with open(event_matrix_path, 'r') as f:
             event_matrix = np.genfromtxt(f, delimiter=',')
         with open(idf_dict_path, 'r') as f:

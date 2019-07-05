@@ -1,8 +1,9 @@
 from django.shortcuts import render
 
-from vectorizer.apps import event_list, event_matrix, idf_dict, key_tokens, event_matrix2list_dict, list2event_matrix_dict
+from vectorizer.apps import event_matrix, idf_dict, key_tokens, event_matrix2list_dict, list2event_matrix_dict
 from extractor.views import wikiExtractor
 from vectorizer.views import tf_idf
+from recommender.models import EventList
 
 from django.http import HttpResponse
 import json
@@ -22,6 +23,9 @@ def predict(event_matrix, vec_norm, threshold):
     return event_pred
 
 
+# The actual recommender function that take http requests and return results.
+# Threshold is hard coded.
+# The event matrix is pre-calculated
 def recommender(request):
 
     threshold = 0.235
@@ -31,22 +35,34 @@ def recommender(request):
 
     tic = time()
 
+    # obtain vector for the wiki article
     wiki_vec = tf_idf(wiki_text, key_tokens, idf_dict)
 
+    # recommendation list
     recommendations = predict(event_matrix, wiki_vec.reshape(1, -1), threshold)
 
-    found = False
+    found = False # updated to True if events are found
     recommendation_list = []
 
+    # if recommendations are found, find events in the list and construct the response dict
     if len(recommendations) != 0:
         found = True
         for ix in recommendations:
             event_ix = int(event_matrix2list_dict[str(ix)])
-            recommendation_list.append(event_list[event_ix])
+            event_object = EventList.objects.get(index=event_ix)
+            event_name = event_object.name
+            event_link = event_object.link
+            event_venue = event_object.venue
+
+            recommendation_list.append({
+                'name' : event_name,
+                'link' : event_link,
+                'venue' : event_venue
+            })
 
     response_dict = {
         'found' : found,
-        'events' : recommendation_list # top 3
+        'events' : recommendation_list
     }
 
     response = json.dumps(response_dict)

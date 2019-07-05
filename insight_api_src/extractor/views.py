@@ -4,7 +4,7 @@ import json
 
 # Create your views here.
 
-
+# find the exact topic text for wiki API
 def wiki_find_redirect(topic):
     url = 'https://en.wikipedia.org/w/api.php?action=query&titles=' + topic + '&&redirects&format=json'
     r = requests.get(url)
@@ -13,6 +13,7 @@ def wiki_find_redirect(topic):
     return title
 
 
+# extract wiki text using wiki API
 def wikiExtractor(wikiTopic):
 
     url_base = 'https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&exintro&explaintext&titles='
