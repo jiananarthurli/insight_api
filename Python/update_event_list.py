@@ -2,8 +2,7 @@ import pandas as pd
 import json
 from sqlalchemy import create_engine
 
-#path = '/Users/arthurli/Documents/Coding/InsightProject/insight_api/insight_api_data/'
-path  = '/home/arthurli/insight_api/insight_api_data'
+path = '/home/arthurli/insight_api/insight_api_data'
 filename = 'event_list.txt'
 
 with open(path + filename, 'r') as f:
