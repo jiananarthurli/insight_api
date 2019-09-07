@@ -10,5 +10,6 @@ with open(path + filename, 'r') as f:
 
 event_list = pd.DataFrame(event_list_json)
 
+# write the dataframe to the psql database
 engine = create_engine('postgresql://arthurli:chrome_insight@localhost:5432/insight', echo=False)
 event_list.to_sql(con=engine, name='event_list', if_exists='replace', chunksize=1000)
