@@ -10,7 +10,7 @@ idna==2.8
 joblib==0.13.2
 jsonschema==3.0.1
 murmurhash==1.0.2
-nltk==3.4.3
+nltk==3.4.5
 numpy==1.16.4
 plac==0.9.6
 preshed==2.0.1
