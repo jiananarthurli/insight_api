@@ -2,9 +2,11 @@
 
 This is the Django API server source codes for the the [Insight Data Science](https://insightdatascience.com) Project [Weekendpedia](https://chrome.google.com/webstore/search/weekendpedia). 
 
+[**Weekendpedia**](https://chrome.google.com/webstore/search/weekendpedia) is an Chrome extension that recommend cultural events (in galleries, museums, etc) in New York City for Wikipedia users. The extension will track the current Wikipedia topic that the user is viewing, and alert the user when a relevant cultural event is found. 
+
 This [**YouTube video**](https://youtu.be/TJuDtRmjgR0) demonstrates how the extension interacts with users.
 
-[**Weekendpedia**](https://chrome.google.com/webstore/search/weekendpedia) is an Chrome extension that recommend cultural events (in galleries, museums, etc) in New York City for Wikipedia users. The extension will track the current Wikipedia topic that the user is viewing, and alert the user when a relevant cultural event is found. This repo contains the Django backend for the API server (in [```./insight_api_src```](./insight_api_src)), and a notebook that explains how the recommender works (in [```./recommender_prototype```](./recommender_prototype)). The event data is scraped from [nyc.com](https://www.nyc.com/) (stored in [```./insight_api_data```](./insight_api_data)).
+This repo contains the Django backend for the API server (in [```./insight_api_src```](./insight_api_src)). The event data is scraped from [nyc.com](https://www.nyc.com/) and stored in [```./insight_api_data```](./insight_api_data).
 
 ### Recommendation algorithm
 
