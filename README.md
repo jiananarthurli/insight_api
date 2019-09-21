@@ -1,6 +1,6 @@
 # Weekendpedia Django API
 
-This is the Django API server source codes for the the [Insight Data Science](https://insightdatascience.com) Project [Weekendpedia](https://chrome.google.com/webstore/search/weekendpedia). 
+This is the Django API server source code repo for the the [Insight Data Science](https://insightdatascience.com) Project [Weekendpedia](https://chrome.google.com/webstore/search/weekendpedia). 
 
 [**Weekendpedia**](https://chrome.google.com/webstore/search/weekendpedia) is an Chrome extension that recommend cultural events (in galleries, museums, etc) in New York City for Wikipedia users. The extension will track the current Wikipedia topic that the user is viewing, and alert the user when a relevant cultural event is found. 
 
@@ -30,4 +30,4 @@ The **vectorizer** ([```./insight_api_src/vectorizer/```](./insight_api_src/vect
 
 The **recommender** ([```./insight_api_src/vectorizer/```](./insight_api_src/vectorizer/)) calculates the cosine similarities between the feature vectors of the wiki texts and the pre-calcualted feature vectors of the events. Events are recommended when the similarities are higher than the threshold. The event infomation (name, description, link, etc) is retrieved from the PostgreSQL server and returned as JSON strings. The functions are defined in [```./insight_api_src/extractor/views.py```](./insight_api_src/extractor/views.py).
 
-The source codes for the Chrome extension is in another [**repo**](https://github.com/jiananarthurli/insight_chrome_extension.git). 
+The source codes for the Chrome extension are in another [**repo**](https://github.com/jiananarthurli/insight_chrome_extension.git). 
