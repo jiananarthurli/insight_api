@@ -3,7 +3,7 @@ blis==0.2.4
 certifi==2019.3.9
 chardet==3.0.4
 cymem==2.0.2
-Django==2.2.3
+Django==2.2.8
 django-cors-headers==3.0.2
 en-core-web-sm==2.1.0
 idna==2.8
